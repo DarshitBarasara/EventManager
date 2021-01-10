@@ -1,7 +1,9 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Event Registartion</title>
+    <title>Event Manager</title>
     <style>
         body{
     margin: 0;
@@ -78,7 +80,7 @@
     border-color: #2ecc71;
 }
 
-.box input[type ="button"] {
+.box input[type ="submit"] {
     background: none;
     text-decoration: none;
     display: block;
@@ -93,7 +95,7 @@
     transition: 0.25s;
 }
 
-.box input[type ="button"]:hover {
+.box input[type ="submit"]:hover {
     background: #2ecc71;
 }
 
@@ -113,28 +115,8 @@
 </head>
 <body>
 
-<div class="box">
-    <form class="form" action="" method="POST">
-        <h1 class="input">Participant Registration</h1>
-        <br>
-        <input class="input" type="text" placeholder="Event Name">
-        <div class="content">
-            <textarea placeholder="Description Here" class="input"></textarea>
-        </div>
-        <input class="input" type="text" placeholder="Location">
-        <div class="content">
-           From <input class="input" id="date-time" type="datetime-local" > To <input class="input" id="date-time" type="datetime-local" >
-        </div>
-        <div class="content">
-           Registartion Deadline <input class="input" id="date-time" type="datetime-local">
-        </div>
-        <input placeholder="Host E-mail" class="input" type="email">
-        <input placeholder="Host Password" class="input" type="password">
-        <input class="input" id="btn" type="button" value="Submit">
+{% csrf_token %}
 
-    </form>
-</div>
-</div>
 	
 </body>
 
